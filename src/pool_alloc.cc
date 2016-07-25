@@ -18,6 +18,7 @@ pool_t* create_pool(size_t size)
   pool->d.end = (u_char *) pool + size;
   pool->d.next = NULL;
   pool->d.failed = 0;
+  pool->max_size = (size < MAX_ALLOC_FROM_POOL) ? size : MAX_ALLOC_FROM_POOL;
 
   pool->current = pool;
   pool->large = NULL;

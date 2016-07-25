@@ -11,4 +11,5 @@ link_directories(${LIB_DIRS})
 add_executable(test_buffer "test_buffer.cc")
 target_link_libraries(test_buffer chat gtest c++)
 
-
+add_executable(test_mempool "test_mempool.cc")
+target_link_libraries(test_mempool chat gtest c++)

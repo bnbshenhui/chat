@@ -17,7 +17,7 @@ extern "C" {
 #define ALIGN_PTR(p, a) \
   (u_char *)(((uintptr_t)(p) + ((uintptr_t)a - 1)) & ~((uintptr_t)a - 1))
 
-#define MAC_ALLOC_FROM_POOL   (PAGE_SIZE - 1)
+#define MAX_ALLOC_FROM_POOL   (PAGE_SIZE - 1)
 #define DEFAULT_POOL_SIZE     (16 * 1024)
 #define MIN_POOL_SIZE \
   ALIGN((sizeof(pool_t) + 2 * sizeof(pool_large_t)), POOL_ALIGNMENT)
